@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tina.secretmessage.MainActivity">
+
+    <ImageView
+        android:id="@+id/ivCamera"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/ivGallery"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ivCamera" />
+
+    <ImageView
+        android:id="@+id/ivUpload"
+        app:srcCompat="@android:drawable/ic_menu_upload_you_tube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:scaleType="center"
+        android:layout_below="@+id/ivCamera"
+        android:layout_above="@+id/btEncode" />
+    <!--android:background="@drawable/red_border"-->
+
+    <Button
+        android:id="@+id/btEncode"
+        android:text="Encode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:minHeight="60dp"
+        android:minWidth="150dp"
+        android:drawableLeft="@android:drawable/ic_partial_secure"
+        android:background="@drawable/red_button"
+        style="@style/button_text"
+        android:onClick="onClickEncode" />
+
+
+
+    <Button
+        android:id="@+id/btDecode"
+        android:text="Decode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:minHeight="60dp"
+        android:minWidth="150dp"
+        android:drawableLeft="@android:drawable/ic_secure"
+        android:background="@drawable/red_button"
+        style="@style/button_text"
+        android:onClick="onClickDecode"/>
+
+    <!-- <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/btEncode"
+        android:layout_alignEnd="@+id/btDecode"
+        android:layout_alignParentStart="true"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:text="Password"
+        android:inputType="text"
+        android:background="@drawable/edit_text_design"
+        style="@style/editText_text"
+        android:onClick="onClickText"/> -->
+
+</RelativeLayout>
